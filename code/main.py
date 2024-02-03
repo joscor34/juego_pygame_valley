@@ -1,5 +1,5 @@
 import pygame, sys # Importamos pygame y sys
-
+from level import Level
 # Comentario de prueba
 
 # Creamos una clase la cual contendrá nuestro juego
@@ -10,7 +10,9 @@ class Game:
     pygame.init() # Iniciamos pygame
     self.screen = pygame.display.set_mode((500,500)) # Le decimos a pygame que tendrá una ventana de 128x128
     self.clock = pygame.time.Clock() # Creamos un reloj interno
-  
+
+    self.level = Level()
+
   def ejecutar(self):
     while True:
       # Es ciclo recorre cada pulsación que haga el usuario
@@ -24,6 +26,8 @@ class Game:
       
       dt = self.clock.tick() / 1000
       pygame.display.update()
+
+      self.level.run(dt)
 
 # Se crea una instancia de Game
 game = Game()
