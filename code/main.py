@@ -1,5 +1,7 @@
 import pygame, sys # Importamos pygame y sys
 from level import Level
+
+from settings import *
 # Comentario de prueba
 
 # Creamos una clase la cual contendrá nuestro juego
@@ -8,7 +10,10 @@ class Game:
   # Creamos un método mágico para inicializar nuestros atributos
   def __init__(self):
     pygame.init() # Iniciamos pygame
-    self.screen = pygame.display.set_mode((500,500)) # Le decimos a pygame que tendrá una ventana de 128x128
+    self.screen = pygame.display.set_mode((VENTANA_LARGO,VENTANA_ANCHO)) # Le decimos a pygame que tendrá una ventana de 128x128
+    
+    pygame.display.set_caption(NOMBRE_VIDEOJUEGO)
+
     self.clock = pygame.time.Clock() # Creamos un reloj interno
 
     self.level = Level()
