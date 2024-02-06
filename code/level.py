@@ -1,4 +1,5 @@
 import pygame
+from player import Player
 
 class Level():
   def __init__(self):
@@ -8,7 +9,13 @@ class Level():
 
     # Creamos un grupo con todos los sprites del nivel
     self.all_sprites = pygame.sprite.Group()
+
+    self.setup()
   
+
+  def setup(self):
+    self.player = Player((250, 250), self.all_sprites)
+
 
   def run(self, dt):
 
