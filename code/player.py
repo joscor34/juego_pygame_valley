@@ -12,9 +12,9 @@ class Player(pygame.sprite.Sprite):
     self.rect = self.image.get_rect(center = pos)
 
     # Configuración para el movimiento
-    self.direction = pygame.math.Vector2(self.rect.center)
+    self.direction = pygame.math.Vector2()
     
-    self.pos = pygame.math.Vector2()
+    self.pos = pygame.math.Vector2(self.rect.center)
 
     self.speed = 100
 
