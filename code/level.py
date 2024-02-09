@@ -23,5 +23,6 @@ class Level():
 
     # Se dibujan nuestros sprites en toda la superficie de la pantalla
     self.all_sprites.draw(self.display_surface)
+
     # Actualizamos esos sprites
-    self.all_sprites.update()
+    self.all_sprites.update(dt)
