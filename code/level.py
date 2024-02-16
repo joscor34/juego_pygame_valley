@@ -19,7 +19,7 @@ class Level():
 
   def run(self, dt):
 
-    self.display_surface.fill('red')
+    self.display_surface.fill('black')
 
     # Se dibujan nuestros sprites en toda la superficie de la pantalla
     self.all_sprites.draw(self.display_surface)
