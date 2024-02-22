@@ -2,7 +2,6 @@ import pygame
 from settings import *
 from support import *
 from os import walk
-import time
 
 class Player(pygame.sprite.Sprite):
   def __init__(self, pos, group):
@@ -74,10 +73,6 @@ class Player(pygame.sprite.Sprite):
       self.direction.x = 0
     # --------------------------------------
       
-
-    if keys[pygame.K_SPACE]:
-      time.sleep(4)
-
   def get_status(self):
 
     # Si mi personaje no se está desplazando
